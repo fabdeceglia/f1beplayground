@@ -1,0 +1,27 @@
+{
+  "name": "bizio-f1-be",
+  "version": "0.0.1",
+  "description": "f1-be-services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabdeceglia/f1beplayground.git"
+  },
+  "keywords": [
+    "f1",
+    "services"
+  ],
+  "author": "Fabrizio de Ceglia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabdeceglia/f1beplayground/issues"
+  },
+  "homepage": "https://github.com/fabdeceglia/f1beplayground#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}
