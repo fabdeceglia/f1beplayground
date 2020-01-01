@@ -7,8 +7,9 @@ const port = 3500;
 const raceListEndpoint = 'http://ergast.com/api/f1/current.json';
 
 
-app.listen(port, () => {
-    console.log('Listening on port: ' + port);
+app.listen(process.env.PORT || port, () => {
+    const usedPort = process.env.PORT || port;
+    console.log('Listening on port: ' + usedPort);
 })
 
 app.get('/race-list', (req, res) => {
