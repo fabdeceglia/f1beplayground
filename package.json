@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/fabdeceglia/f1beplayground#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "lodash": "^4.17.15",
     "request": "^2.88.0"
   }
 }
