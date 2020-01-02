@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [{ "src": "server.js", "use": "@now/node-server" }],
+    "routes": [
+        {
+          "src": "/season-schedule",
+          "dest": "/server.js",
+          "methods": ["GET"]
+        },
+          {
+            "src": "/driver-standings",
+            "dest": "/server.js",
+            "methods": ["GET"]
+          },
+          {
+            "src": "/constructor-standings",
+            "dest": "/server.js",
+            "methods": ["GET"]
+          }
+      ]
+  }
