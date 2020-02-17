@@ -1,6 +1,7 @@
 const express = require('express');
 const request = require('request');
 const endpoints = require('./endpoints.js');
+const mappers = require('./mappers.js');
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.get('/season-schedule', (req, res) => {
         if(error) {
             return console.dir(error);
         }
-        res.send(JSON.parse(body));
+        res.send(mappers.mapRaces(JSON.parse(body)));
     });
 });
 
@@ -25,7 +26,7 @@ app.get('/driver-standings', (req, res) => {
         if(error) {
             return console.dir(error);
         }
-        res.send(JSON.parse(body));
+        res.send(mappers.mapDriverStandings(JSON.parse(body)));
     });
 });
 
@@ -34,6 +35,6 @@ app.get('/constructor-standings', (req, res) => {
         if(error) {
             return console.dir(error);
         }
-        res.send(JSON.parse(body));
+        res.send(mappers.mapConstructorStandings(JSON.parse(body)));
     });
 });
