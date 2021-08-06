@@ -1,7 +1,18 @@
 const lodash = require('lodash/fp');
+const moment = require('moment');
 
 function mapRacesFromMrData(races) {
-    return lodash.get('MRData.RaceTable.Races')(races);   
+    const extractedRaces = lodash.get('MRData.RaceTable.Races')(races);
+    const mappedRaces = lodash.map((race) => {
+        return {
+            raceName: race.raceName,
+            circuitName: race.Circuit.circuitName,
+            country: race.Circuit.Location.country,
+            locality: race.Circuit.Location.locality,
+            date: moment(race.date).format("dddd, MMMM Do YYYY"),
+        }
+    })(extractedRaces);
+    return mappedRaces;   
 }
 
 function mapDriverStandingsFromMrData(driverStandings) {
