@@ -3,17 +3,17 @@
     "builds": [{ "src": "server.js", "use": "@now/node-server" }],
     "routes": [
         {
-          "src": "/season-schedule",
+          "src": "/tgb/season-schedule",
           "dest": "/server.js",
           "methods": ["GET"]
         },
           {
-            "src": "/driver-standings",
+            "src": "/tgb/driver-standings",
             "dest": "/server.js",
             "methods": ["GET"]
           },
           {
-            "src": "/constructor-standings",
+            "src": "/tgb/constructor-standings",
             "dest": "/server.js",
             "methods": ["GET"]
           }
